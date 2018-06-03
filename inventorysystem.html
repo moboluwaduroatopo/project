@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+<script type="text/javascript" src="jquery/jquery-3.1.1.js"></script>
+	<title>Inventory system</title>
+</head>
+<script type="text/javascript">
+	$("#add").on("click",function()
+     	{
+     		
+     		var x="<tr><td class='fir'><input placeholder='Fisrtname' id='input' class='form-control first'></td><td class='sec'><input  placeholder='Lastname' id='input' class='form-control last' ></td><td class='number'><input id='input'  placeholder='01432'  class='form-control num'></td><td><input placeholder='Fisrtname' id='input' class='form-control first'></td><td><input placeholder='Fisrtname' id='input' class='form-control first'></td></tr>";
+     		$("table").append(x);
+     		alert();
+     	});
+	       
+</script>
+<style type="text/css">
+	canvas{margin-top: 10px}
+</style>
+
+<body>
+<canvas id="myfirst" class="myfirst" width="650" height="400"  style="border:1px solid #eee;background-color:#f5f5f5;box-shadow:5px 5px 5px #ccc;margin-bottom:10px;">writing myfirstcanvas</canvas>
+     <table border="1" style="width:80%" class="table">
+     <tr >
+     <th>image</th>
+     <th>product Name</th>
+     <th>Qty Avl</th>
+      <th>price</th>
+     <th>purchase</th>
+     <th>Total</th>
+     <th rowspan="7"><input type="" name="" style=" height:280px " id="show" ></th>
+     </tr>
+     <tr>
+     	<td><button onclick="image();"id="image" ><img src="images-11.jpeg" height="20px" width="30px" ></button></td>
+     	<td>kshdfedjefk</td>
+     	<td ><input id="q1" type="text" name="" value="100" disabled=""  ></td>
+     	<td ><input id="p1" type="text" name="" value="" onmouseleave ="myfirst();"></td>
+     	<td><input id="pu1" type="text" name="" value="" onkeyup ="myfirst();"></td></td>
+     	<td><input id="t1" type="text" name=""></td>
+     </tr>
+     <tr>
+     	<td><img src="images-12.jpeg" height="20px" width="30px"></td>
+     	<td>kshdfedjefk</td>
+     	<td ><input id="q1" type="text" name="5" value="" onkeyup="myfirst();"></td>
+          <td ><input id="p1" type="text" name="" value="" onkeyup="myfirst();"></td>
+          <td></td>
+          <td><input id="t1" type="text" name=""></td>
+     </tr>
+     <tr>
+     	<td><img src="images-2.jpeg" height="20px" width="30px"></td>
+     	<td>kshdfedjefk</td>
+     	<td ><input id="q1" type="text" name="5" value="" onkeyup="myfirst();"></td>
+          <td ><input id="p1" type="text" name="" value="" onkeyup="myfirst();"></td>
+          <td></td>
+          <td><input id="t1" type="text" name=""></td>
+     </tr>
+     <tr>
+     	<td><img src="images-15.jpeg" height="20px" width="30px"></td>
+     	<td>kshdfedjefk</td>
+     	<td ><input id="q1" type="text" name="5" value="" onkeyup="myfirst();"></td>
+          <td ><input id="p1" type="text" name="" value="" onkeyup="myfirst();"></td>
+          <td></td>
+          <td><input id="t1" type="text" name=""></td>
+     </tr>
+     <tr>
+     	<td><img src="images-2.jpeg" height="20px" width="30px" ></td>
+     	<td>kshdfedjefk</td>
+     	<td ><input id="q1" type="text" name="5" value="" onkeyup="myfirst();"></td>
+          <td ><input id="p1" type="text" name="" value="" onkeyup="myfirst();"></td>
+          <td></td>
+          <td><input id="t1" type="text" name=""></td>
+     </tr>
+     <tr >
+     	<td id="td" colspan="5" style="color: red;text-align: center; " >Total:</td>
+     	<td></td>
+     </tr>
+     </table>
+     <button class="btn btn-success"" id="add">Add line</button>
+     <button class="btn btn-danger" class="del" id="del">delete all line</button>
+      
+      <script type="text/javascript">
+       function myfirst() {
+          var p=document.getElementById('p1').value;
+         var q=document.getElementById('q1').value ;
+         var pu=document.getElementById('pu1').value;
+          var t = parseInt(pu) * parseInt(p);
+          var pur=parseInt(q)  - parseInt(pu);
+           if (!isNaN(t)){
+              document.getElementById('t1').value = t;
+           }
+              else  if (!isNaN(pur)){
+              document.getElementById('q1').value = pur;
+           }
+           //else if (!isNaN(t)){
+            //   document.getElementById('q1').value = pur;
+          // }
+           
+        }
+function image() {
+     // alert();
+   //var ima=document.getElementById('image')
+     var x=document.createElement("IMG");
+     x.setAttribute("src","images-11.jpeg");
+     x.setAttribute("width","100");
+     x.setAttribute("height","210");
+     x.setAttribute("alt","The Pulpit Rock");
+     document.body.append-Child(x);
+    
+}
+         //alert( a);
+    
+      </script>
+</body>
+
+</html>
